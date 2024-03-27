@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "villaDto",
-        "Type": "MagicVilla_API.Models.DTO.VillaDTO",
+        "Name": "createDTO",
+        "Type": "MagicVilla_API.Models.DTO.VillaCreateDTO",
         "IsRequired": true
       }
     ],
@@ -157,8 +157,8 @@
         "IsRequired": true
       },
       {
-        "Name": "villaDTO",
-        "Type": "MagicVilla_API.Models.DTO.VillaDTO",
+        "Name": "updateDTO",
+        "Type": "MagicVilla_API.Models.DTO.VillaUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -194,6 +194,11 @@
       }
     ],
     "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
       {
         "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
         "MediaTypes": [

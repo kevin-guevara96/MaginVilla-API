@@ -1,6 +1,7 @@
 ﻿using MagicVilla_API.Models;
 using MagicVilla_API.Models.DTO;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace MagicVilla_API.Data
 {
@@ -16,6 +17,7 @@ namespace MagicVilla_API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Villa>().ToTable("Villa").HasData(
                 new Villa
                 {

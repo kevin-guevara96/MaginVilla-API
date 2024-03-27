@@ -1,3 +1,4 @@
+using MagicVilla_API;
 using MagicVilla_API.Data;
 using MagicVilla_API.Models;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSql"));
 });
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 var app = builder.Build();
 
