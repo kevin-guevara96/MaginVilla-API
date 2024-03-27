@@ -1,5 +1,185 @@
 [
   {
+    "ContainingType": "MagicVilla_API.Controllers.NumeroVillaController",
+    "Method": "GetNumeroVillas",
+    "RelativePath": "api/NumeroVilla",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_API.Models.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_API.Controllers.NumeroVillaController",
+    "Method": "NewNumeroVilla",
+    "RelativePath": "api/NumeroVilla",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDTO",
+        "Type": "MagicVilla_API.Models.DTO.NumeroVillaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_API.Models.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_API.Controllers.NumeroVillaController",
+    "Method": "UpdateVilla",
+    "RelativePath": "api/NumeroVilla/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "no",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateDTO",
+        "Type": "MagicVilla_API.Models.DTO.NumeroVillaUpdateDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_API.Controllers.NumeroVillaController",
+    "Method": "GetNumeroVilla",
+    "RelativePath": "api/NumeroVilla/{no}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "no",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_API.Models.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_API.Controllers.NumeroVillaController",
+    "Method": "DeleteVilla",
+    "RelativePath": "api/NumeroVilla/{no}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "no",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  },
+  {
     "ContainingType": "MagicVilla_API.Controllers.VillaController",
     "Method": "GetVillas",
     "RelativePath": "api/Villa",
@@ -9,7 +189,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MagicVilla_API.Models.DTO.VillaDTO, MagicVilla_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "MagicVilla_API.Models.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -35,7 +215,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_API.Models.DTO.VillaDTO",
+        "Type": "MagicVilla_API.Models.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -75,7 +255,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_API.Models.DTO.VillaDTO",
+        "Type": "MagicVilla_API.Models.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
